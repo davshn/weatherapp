@@ -5,15 +5,18 @@ import { Text } from "./TextStyled";
 import { TitleCard } from "./TitleCardStyled";
 import propTypes from "prop-types";
 
-export default function WeatherCard({onClose,name,min,max,img}) {       //Función generadora del componente tarjeta
-    const WhCard = styled.article`               //Estilo de la tarjeta de clima
-        //Tu codigo acá
-        background:white;
-        border: 2px solid #000;
-    
-    `;
 
-  return (                          //Dentro del return hay codigo html xon inserciones de javascript
+
+const WhCard = styled.article`               //Estilo de la tarjeta de clima
+//Tu codigo acá
+background:white;
+border: 2px solid #000;
+
+`;
+
+export default function WeatherCard({onClose,name,min,max,img}) {       //Función generadora del componente tarjeta
+  
+    return (                          //Dentro del return hay codigo html xon inserciones de javascript
     <WhCard>                                                 {/*WhCard aplica los estilos de la tarjeta de clima, representa una etiqueta <article> */}
         <div>
             <CloseButton onClick={onClose}>X</CloseButton>   {/*Aplica los estilos de boton cerrar, representa una etiqueta <Button>*/}
