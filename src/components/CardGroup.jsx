@@ -1,8 +1,8 @@
-import WeatherCard from './Card.jsx';
+import WeatherCard from './WeatherCard';
 
-export default function Cards(props) {
-  // acá va tu código
-  // tip, podés usar un map
+export default function CardGroup(props) {
+  
+
   return (
   <>    
     {
