@@ -3,6 +3,7 @@ import {CloseButton} from './CloseButtonStyled';
 import { ImgCard } from "./ImgCardStyled";
 import { Text } from "./TextStyled";
 import { TitleCard } from "./TitleCardStyled";
+import propTypes from "prop-types";
 
 export default function WeatherCard({onClose,name,min,max,img}) {       //Funci√≥n generadora del componente tarjeta
     const WhCard = styled.article`               //Estilo de la tarjeta de clima
@@ -32,3 +33,12 @@ export default function WeatherCard({onClose,name,min,max,img}) {       //Funci√
     </WhCard>
     )
 };
+
+
+WeatherCard.propTypes = {
+    max: propTypes.number,
+    min: propTypes.number,
+    name: propTypes.string,
+    img: propTypes.string,
+    onClose: propTypes.func
+}
