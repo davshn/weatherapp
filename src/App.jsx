@@ -4,7 +4,7 @@ import data from './data.js';
 function App() {
   return (
     
-    <div>    {/*Crea la tarjeta de clima y le pasa parametros*/}
+    <div>    {/*Crea el arreglo de ciudades y les apsa parametros*/}
     <CardGroup                               
       cities={data}
     />
