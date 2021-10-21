@@ -5,8 +5,6 @@ import { Text } from "./TextStyled";
 import { TitleCard } from "./TitleCardStyled";
 import propTypes from "prop-types";
 
-
-
 const WhCard = styled.article`               //Estilo de la tarjeta de clima
 //Tu codigo ac√°
 background:white;
@@ -37,11 +35,10 @@ export default function WeatherCard({onClose,name,min,max,img}) {       //Funci√
     )
 };
 
-
-WeatherCard.propTypes = {
+WeatherCard.propTypes = {            //Verificacion de que los datos enviados sean del tipo correcto
     max: propTypes.number,
     min: propTypes.number,
     name: propTypes.string,
     img: propTypes.string,
     onClose: propTypes.func
-}
+};
