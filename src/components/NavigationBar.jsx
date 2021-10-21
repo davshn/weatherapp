@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 
 const NavigationContainer = styled.section`               //Estilo del contenedor de tarjetas
 //Tu codigo acá
-width: 280px;
+width: 300px;
 height: 35px;
 background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(121,9,115,1) 55%, rgba(2,0,36,1) 100%);;
 border-radius: 5px;

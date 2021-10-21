@@ -3,7 +3,9 @@ import styled from "styled-components";
 const SubmitButton = styled.input`
 //Tu codigo aqui
 
-
+width: 90px;
+height: 30px;
+border-radius: 15px;
 `
 const TextSearch = styled.input`
 //Tu codigo aqui
