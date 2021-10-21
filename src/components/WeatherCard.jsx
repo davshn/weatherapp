@@ -66,8 +66,8 @@ export default function WeatherCard({onClose,name,min,max,img}) {       //Funci�
             <MaxText>Max <br></br></MaxText>
         </div>
         <div>
-            <MinText>{min+"°k "}</MinText> 
-            <MaxText>{max+"°k "} <br></br></MaxText>
+            <MinText>{min+"° "}</MinText> 
+            <MaxText>{max+"° "} <br></br></MaxText>
         </div>
         <div>
             <ImgCard src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="Logo"></ImgCard>
