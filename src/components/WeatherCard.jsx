@@ -10,6 +10,7 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
 background:white;
 border: 2px solid #af2626;
 width: 300px;
+padding: 20px;
 
 `;
 
