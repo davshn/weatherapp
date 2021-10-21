@@ -4,12 +4,13 @@ import { ImgCard } from "./ImgCardStyled";
 import { Text } from "./TextStyled";
 import { TitleCard } from "./TitleCardStyled";
 import propTypes from "prop-types";
+import fondo from "../assets/fondo.jpg";
 
 
 const WhCard = styled.article`               //Estilo de la tarjeta de clima
 //Tu codigo acá
 
-
+background-image:url("${fondo}");
 display: inline-block;
 width: 200px;
 margin: 25px;
