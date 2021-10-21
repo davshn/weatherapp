@@ -1,6 +1,5 @@
 import WeatherCard from './WeatherCard';
 import styled from "styled-components"
-import { Text } from "./TextStyled";
 import propTypes from "prop-types";
 
 const CardContainer = styled.section`               //Estilo del contenedor de tarjetas
@@ -24,7 +23,7 @@ export default function CardGroup({cities}) {
   </CardContainer>
   )
   }
-  else {return <Text>Sin ciudades</Text>}
+  else {return <span>Sin ciudades</span>}
 };
 
 
