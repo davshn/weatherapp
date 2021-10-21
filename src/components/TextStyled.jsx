@@ -5,7 +5,7 @@ export const Text = styled.span`
       width: 100px;
       border: 1px #ccc solid;
       margin: 13px;
-      color: black;
+      color: #fdfcfc;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 `;

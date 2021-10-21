@@ -2,8 +2,9 @@ import styled from "styled-components"
 //estilo para los titulos de las cartas
 export const TitleCard = styled.h3`
       //Tu codigo acá
-      color: #1a9191;
-      font-size: 30px;
-      margin-left: 23%;
+      -webkit-text-stroke: 1px white;
+    color: transparent; text-align: center;
+      font-size: 37px;
+      margin-left: 18%;
       font-family: Arial, Helvetica, sans-serif;
 `;
