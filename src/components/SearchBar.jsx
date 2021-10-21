@@ -1,7 +1,15 @@
-
+import styled from "styled-components";
 //Estilo para los botones de la aplicacion
+const SubmitButton = styled.input`
+//Tu codigo aqui
 
 
+`
+const TextSearch = styled.input`
+//Tu codigo aqui
+
+
+`
 
 
 export default function SearchBar({onSearch}) {
@@ -10,11 +18,11 @@ export default function SearchBar({onSearch}) {
           e.preventDefault();
           onSearch("Cairns");
         }}>
-          <input
+          <TextSearch
             type="text"
             placeholder="Ciudad..."
           />
-          <input type="submit" value="Agregar" />
+          <SubmitButton type="submit" value="Agregar" />
         </form>
       );
     }
