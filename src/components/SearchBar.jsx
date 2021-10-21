@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { useState } from "react";
 //Estilo para los botones de la aplicacion
 const SubmitButton = styled.input`
-//Tu codigo aqui
   width: 90px;
   height: 30px;
   border-radius: 5px;
@@ -20,7 +19,7 @@ const SubmitButton = styled.input`
 }
 `
 const TextSearch = styled.input`
-//Tu codigo aqui
+
   margin: 5px;
   height: 26px;
   border-radius: 5px;
