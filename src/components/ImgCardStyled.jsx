@@ -3,5 +3,6 @@ import styled from "styled-components"
 export const ImgCard = styled.img`
       //Tu codigo acá
       color: black;
+
     
 `;

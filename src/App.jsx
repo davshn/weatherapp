@@ -5,7 +5,14 @@ import { useState } from 'react';
 
 const MainApp = styled.main`
   //Tu codigo aqui
-
+  border: 2px #000 solid;
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #d9f9ff 0%, #c9e2ff 55%, rgba(2,0,36,1) 100%);
+  
+  
 `
 
 function App() {

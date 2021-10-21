@@ -5,6 +5,6 @@ export const TitleCard = styled.h3`
       -webkit-text-stroke: 1px white;
     color: transparent; text-align: center;
       font-size: 37px;
-      margin-left: 13%;
+      margin-left: 0%;
       font-family: Arial, Helvetica, sans-serif;
 `;

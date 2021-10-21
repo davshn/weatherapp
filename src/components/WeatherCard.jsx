@@ -36,20 +36,18 @@ const MinText = styled.span`
       //Tu codigo acá
       width: 100px;
       border: 1px #ccc solid;
-      margin: 13px;
+      margin: 0px;
       color: #fdfdfd;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+      text-align: justify;
 `;
 
 const MaxText = styled.span`
       //Tu codigo acá
       width: 100px;
-      border: 1px #ccc solid;
-      margin: 13px;
       color: #fdfcfc;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+    margin: 20%;
 `;
 
 export default function WeatherCard({onClose,name,min,max,img,id}) {       //Función generadora del componente tarjeta
