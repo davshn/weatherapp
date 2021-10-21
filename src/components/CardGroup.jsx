@@ -1,5 +1,6 @@
 import WeatherCard from './WeatherCard';
 import styled from "styled-components"
+import { Text } from "./TextStyled";
 
 const CardContainer = styled.section`               //Estilo del contenedor de tarjetas
 //Tu codigo acá
@@ -8,12 +9,12 @@ border: 5px solid red;
 
 `;
 
-export default function CardGroup(props) {
-  
+export default function CardGroup({cities}) {
+  if(cities){
   return (
   <CardContainer>    
     {
-      props.cities.map((city)=> <WeatherCard 
+      cities.map((city)=> <WeatherCard 
         max={city.main.temp_max} 
         min={city.main.temp_min} 
         name={city.name} 
@@ -24,4 +25,6 @@ export default function CardGroup(props) {
     }{/*para cada elemento del array cities, crea por funcion flecha una tarjeta de clima para cada elemento*/}
   </CardContainer>
   )
+  }
+  else {return <Text>Sin ciudades</Text>}
 };
