@@ -7,10 +7,8 @@ const MainApp = styled.main`
   //Tu codigo aqui
 
 
+
 `
-
-
-
 
 function App() {
   return (
