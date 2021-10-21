@@ -3,7 +3,9 @@ import SearchBar from "./SearchBar";
 
 const NavigationContainer = styled.section`               //Estilo del contenedor de tarjetas
 //Tu codigo acá
-background: red;
+background: #f8eeee;
+border: #ccc 2px;
+
 
 `;
 

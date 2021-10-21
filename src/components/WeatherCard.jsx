@@ -5,19 +5,22 @@ import { Text } from "./TextStyled";
 import { TitleCard } from "./TitleCardStyled";
 import propTypes from "prop-types";
 
+
 const WhCard = styled.article`               //Estilo de la tarjeta de clima
 //Tu codigo acá
+
+
 display: inline-block;
 width: 200px;
 margin: 25px;
 margin-top: 15%;
 margin-left: 12%;
-background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(121,9,115,1) 55%, rgba(2,0,36,1) 100%);
 border-radius: 10%;
-border: #ccc 1px solid;
--webkit-box-shadow: 10px 10px 12px -5px rgba(54,37,54,1);
--moz-box-shadow: 10px 10px 12px -5px rgba(54,37,54,1);
-box-shadow: 10px 10px 12px -5px rgba(54,37,54,1);
+-webkit-box-shadow: 19px 20px 17px -12px rgba(1,3,26,1);
+-moz-box-shadow: 19px 20px 17px -12px rgba(1,3,26,1);
+box-shadow: 19px 20px 17px -12px rgba(1,3,26,1);
+
+
 `;
 
 export default function WeatherCard({onClose,name,min,max,img}) {       //Función generadora del componente tarjeta
