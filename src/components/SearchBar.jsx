@@ -1,5 +1,5 @@
 import styled from "styled-components";
-//import { useState } from "react";
+import { useState } from "react";
 //Estilo para los botones de la aplicacion
 const SubmitButton = styled.input`
 //Tu codigo aqui
@@ -33,14 +33,19 @@ opacity: 0.6;
 
 
 export default function SearchBar({onSearch}) {
-  //const [city,setCity]  = useState()
+  const [city,setCity]  = useState("")
   
       return (
         <form onSubmit={(e) => {
           e.preventDefault();
-          onSearch("Bogota");
+          onSearch(city);
         }}>
           <TextSearch
+            onChange={(e) => {
+              e.preventDefault();
+              console.log(e.target.value);
+              setCity(e.target.value);
+            }}
             type="text"
             placeholder="Ciudad..."
           />
