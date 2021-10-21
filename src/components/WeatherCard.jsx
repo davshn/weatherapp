@@ -52,13 +52,18 @@ const MaxText = styled.span`
     
 `;
 
-export default function WeatherCard({onClose,name,min,max,img}) {       //Función generadora del componente tarjeta
-  
+export default function WeatherCard({onClose,name,min,max,img,id}) {       //Función generadora del componente tarjeta
+    
     return (                          //Dentro del return hay codigo html xon inserciones de javascript
     <WhCard> 
                                                         {/*WhCard aplica los estilos de la tarjeta de clima, representa una etiqueta <article> */}
         <div>
-            <CloseButton onClick={onClose}>X</CloseButton>   {/*Aplica los estilos de boton cerrar, representa una etiqueta <Button>*/}
+            <CloseButton onClick={(e) => {
+          e.preventDefault();
+          onClose(id);
+        }}
+        >X
+        </CloseButton>   {/*Aplica los estilos de boton cerrar, representa una etiqueta <Button>*/}
             <TitleCard>{name}</TitleCard>                    {/*Aplica los estilos del titulo de tarjetas, representa una etiqueta <h3>*/}
         </div>
         <div>

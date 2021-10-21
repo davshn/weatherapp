@@ -10,7 +10,11 @@ const MainApp = styled.main`
 
 function App() {
   const [cities, setCities] = useState([]);
-  const apiKey='4ae2636d8dfbdc3044bede63951a019b';
+  const apiKey='d5798098cb9831e5df41e6dcea8d454c';
+
+  function onClose(id) {
+    setCities(oldCities => oldCities.filter(c => c.id !== id));
+  }
 
   function onSearch(ciudad) {
 
@@ -42,7 +46,10 @@ function App() {
     
     <MainApp>    {/*Crea el arreglo de ciudades y les pasa parametros*/}
       <NavigationBar onSearch={onSearch} />
-      <CardGroup cities={cities}/>
+      <CardGroup 
+        cities={cities}
+        onClose={onClose}
+      />
     </MainApp>
         
   );

@@ -6,7 +6,8 @@ const CardContainer = styled.section`               //Estilo del contenedor de t
 //Tu codigo acá
 `;
 
-export default function CardGroup({cities}) {
+export default function CardGroup({cities,onClose}) {
+  
   if(cities){
   return (
   <CardContainer>    
@@ -16,8 +17,9 @@ export default function CardGroup({cities}) {
         min={city.min} 
         name={city.name} 
         img={city.img} 
-        onClose={() => alert(city.name)}
-        key={city.id}/>               
+        onClose={onClose}
+        key={city.id}
+        id={city.id}/>               
       )
     }{/*para cada elemento del array cities, crea por funcion flecha una tarjeta de clima para cada elemento*/}
   </CardContainer>
