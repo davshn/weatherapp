@@ -1,6 +1,7 @@
 import WeatherCard from './WeatherCard';
 import styled from "styled-components"
 import { Text } from "./TextStyled";
+import propTypes from "prop-types";
 
 const CardContainer = styled.section`               //Estilo del contenedor de tarjetas
 //Tu codigo acá
@@ -28,3 +29,8 @@ export default function CardGroup({cities}) {
   }
   else {return <Text>Sin ciudades</Text>}
 };
+
+
+WeatherCard.propTypes = {            //Verificacion de que los datos enviados sean del tipo correcto
+    cities: propTypes.array
+}
