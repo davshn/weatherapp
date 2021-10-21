@@ -5,7 +5,8 @@ import propTypes from "prop-types";
 
 const CardContainer = styled.section`               //Estilo del contenedor de tarjetas
 //Tu codigo acá
-background: #d6d3d3;
+background: #f55151;
+z-index: -2;
 
 
 `;
