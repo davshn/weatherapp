@@ -4,5 +4,6 @@ export const TitleCard = styled.h3`
       //Tu codigo acá
       color: #1a9191;
       font-size: 30px;
-      float: unset;
+      margin-left: 23%;
+      font-family: Arial, Helvetica, sans-serif;
 `;

@@ -8,6 +8,8 @@ export const CloseButton = styled.button`
     color: black;
     border: 3px solid transparent;
     transition: all 1s ease-out;   //la animacion dura 1 segundo 
+    float: right;
+    margin-top: -20px;
         
     &:hover {                       //Para declarar el over o cualquier seudo clase se usa el & como identificador
       transform:  rotateZ(360deg);  //rotacion

@@ -5,10 +5,6 @@ import propTypes from "prop-types";
 
 const CardContainer = styled.section`               //Estilo del contenedor de tarjetas
 //Tu codigo acá
-background: #f55151;
-z-index: -2;
-
-
 `;
 
 export default function CardGroup({cities}) {
