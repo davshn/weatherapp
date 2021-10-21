@@ -5,11 +5,28 @@ const SubmitButton = styled.input`
 
 width: 90px;
 height: 30px;
-border-radius: 15px;
+border-radius: 5px;
+color: #fff;
+background: transparent;
+border: #fff 2px solid;
+font-weight: bolder;
+
+&:hover{
+  transform : scale(0.9);
+		-moz-transform : scale(0.9); /* Firefox */
+		-webkit-transform : scale(0.9); /* Chrome - Safari */
+		-o-transform : scale(0.9); /* Opera */
+		-ms-transform : scale(0.9); /* IE9 */
+}
 `
 const TextSearch = styled.input`
 //Tu codigo aqui
+margin: 5px;
+height: 26px;
+border-radius: 5px;
+border: #fff 1px solid;
 
+opacity: 0.6;
 
 `
 

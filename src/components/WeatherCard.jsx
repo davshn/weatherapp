@@ -12,21 +12,32 @@ background-image:url("${fondo}");
 display: inline-block;
 width: 200px;
 margin: 25px;
-margin-top: 15%;
+margin-top: 8%;
 margin-left: 12%;
 border-radius: 10%;
--webkit-box-shadow: 19px 20px 17px -12px rgba(1,3,26,1);
--moz-box-shadow: 19px 20px 17px -12px rgba(1,3,26,1);
-box-shadow: 19px 20px 17px -12px rgba(1,3,26,1);
+-webkit-box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
+-moz-box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
+box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
 
+&:hover{
+    transform : scale(1.1);
+	-moz-transform : scale(1.1); /* Firefox */
+	-webkit-transform : scale(1.1); /* Chrome - Safari */
+	-o-transform : scale(1.1); /* Opera */
+	-ms-transform : scale(1.1); /* IE9 */
+    -webkit-box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
+-moz-box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
+box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
+    }
 `;
+
 
 const MinText = styled.span`
       //Tu codigo acá
       width: 100px;
       border: 1px #ccc solid;
       margin: 13px;
-      color: #fdfcfc;
+      color: #fdfdfd;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 `;
