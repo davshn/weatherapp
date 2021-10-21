@@ -14,6 +14,12 @@ const MainApp = styled.main`
   
   
 `
+const MeteorEffect = styled.span`
+//Tu codigo aqui
+
+
+
+`
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -52,6 +58,7 @@ function App() {
   return (
     
     <MainApp>    {/*Crea el arreglo de ciudades y les pasa parametros*/}
+      <MeteorEffect></MeteorEffect>
       <NavigationBar onSearch={onSearch} />
       <CardGroup 
         cities={cities}
