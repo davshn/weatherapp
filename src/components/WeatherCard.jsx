@@ -8,7 +8,8 @@ import propTypes from "prop-types";
 const WhCard = styled.article`               //Estilo de la tarjeta de clima
 //Tu codigo acá
 background:white;
-border: 2px solid #000;
+border: 2px solid #af2626;
+width: 300px;
 
 `;
 
