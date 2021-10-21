@@ -12,10 +12,10 @@ export default function CardGroup({cities}) {
   <CardContainer>    
     {
       cities.map((city)=> <WeatherCard 
-        max={city.main.temp_max} 
-        min={city.main.temp_min} 
+        max={city.max} 
+        min={city.min} 
         name={city.name} 
-        img={city.weather[0].icon} 
+        img={city.img} 
         onClose={() => alert(city.name)}
         key={city.id}/>               
       )

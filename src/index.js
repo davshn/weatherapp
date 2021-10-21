@@ -5,9 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import './normalize.css';
 
 ReactDOM.render(              //Realiza el render de la app
-  <React.StrictMode>            {/*Invoca la react app*/}
+  <>            {/*Invoca la react app*/}
     <App />
-  </React.StrictMode>,
+  </>,
   document.getElementById('root')    //Inyecta el codigo html en la etiqueta root
 );
 

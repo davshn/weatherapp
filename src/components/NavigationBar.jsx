@@ -14,11 +14,12 @@ opacity: 0.7;
 
 `;
 
-export default function NavigationBar() {
-
+export default function NavigationBar({onSearch}) {
+  
   return (
+    
     <NavigationContainer>    
-      <SearchBar/>
+      <SearchBar onSearch={onSearch}/>
     </NavigationContainer>
   )
   
