@@ -1,11 +1,9 @@
 import styled from "styled-components"
 import {CloseButton} from './CloseButtonStyled';
 import { ImgCard } from "./ImgCardStyled";
-import { Text } from "./TextStyled";
 import { TitleCard } from "./TitleCardStyled";
 import propTypes from "prop-types";
 import fondo from "../assets/fondo.jpg";
-
 
 const WhCard = styled.article`               //Estilo de la tarjeta de clima
 //Tu codigo acá
@@ -21,7 +19,26 @@ border-radius: 10%;
 -moz-box-shadow: 19px 20px 17px -12px rgba(1,3,26,1);
 box-shadow: 19px 20px 17px -12px rgba(1,3,26,1);
 
+`;
 
+const MinText = styled.span`
+      //Tu codigo acá
+      width: 100px;
+      border: 1px #ccc solid;
+      margin: 13px;
+      color: #fdfcfc;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+`;
+
+const MaxText = styled.span`
+      //Tu codigo acá
+      width: 100px;
+      border: 1px #ccc solid;
+      margin: 13px;
+      color: #fdfcfc;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 `;
 
 export default function WeatherCard({onClose,name,min,max,img}) {       //Función generadora del componente tarjeta
@@ -34,12 +51,12 @@ export default function WeatherCard({onClose,name,min,max,img}) {       //Funci�
             <TitleCard>{name}</TitleCard>                    {/*Aplica los estilos del titulo de tarjetas, representa una etiqueta <h3>*/}
         </div>
         <div>
-            <Text>Min </Text>                                {/*Aplica los estilos de texto, representa una etiqueta <span>*/}
-            <Text>Max <br></br></Text>
+            <MinText>Min </MinText>                                {/*Aplica los estilos de texto, representa una etiqueta <span>*/}
+            <MaxText>Max <br></br></MaxText>
         </div>
         <div>
-            <Text>{min+"°k "}</Text> 
-            <Text>{max+"°k "} <br></br></Text>
+            <MinText>{min+"°k "}</MinText> 
+            <MaxText>{max+"°k "} <br></br></MaxText>
         </div>
         <div>
             <ImgCard src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="Logo"></ImgCard>
