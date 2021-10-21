@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import {CloseButton} from './CloseButtonStyled';
 import { ImgCard } from "./ImgCardStyled";
-import { TitleCard } from "./TitleCardStyled";
 import propTypes from "prop-types";
 import fondo from "../assets/fondo.jpg";
 
@@ -30,23 +29,31 @@ box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
 box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
     }
 `;
-
+//estilo para los titulos de las cartas
+const TitleCard = styled.h3`
+      //Tu codigo acá
+    -webkit-text-stroke: 1px white;
+    color: transparent; text-align: center;
+    font-size: 37px;
+    margin-left: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+`;
 
 const MinText = styled.span`
       //Tu codigo acá
-      width: 100px;
-      border: 1px #ccc solid;
-      margin: 0px;
-      color: #fdfdfd;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      text-align: justify;
+    width: 100px;
+    border: 1px #ccc solid;
+    margin: 0px;
+    color: #fdfdfd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
 `;
 
 const MaxText = styled.span`
-      //Tu codigo acá
-      width: 100px;
-      color: #fdfcfc;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    //Tu codigo acá
+    width: 100px;
+    color: #fdfcfc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 20%;
 `;
 
@@ -57,11 +64,11 @@ export default function WeatherCard({onClose,name,min,max,img,id}) {       //Fun
                                                         {/*WhCard aplica los estilos de la tarjeta de clima, representa una etiqueta <article> */}
         <div>
             <CloseButton onClick={(e) => {
-          e.preventDefault();
-          onClose(id);
-        }}
-        >X
-        </CloseButton>   {/*Aplica los estilos de boton cerrar, representa una etiqueta <Button>*/}
+                e.preventDefault();
+                onClose(id);
+            }}>
+            X
+            </CloseButton>   {/*Aplica los estilos de boton cerrar, representa una etiqueta <Button>*/}
             <TitleCard>{name}</TitleCard>                    {/*Aplica los estilos del titulo de tarjetas, representa una etiqueta <h3>*/}
         </div>
         <div>
