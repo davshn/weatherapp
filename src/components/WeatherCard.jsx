@@ -45,7 +45,8 @@ const InfoText = styled.span`
 `;
 
 const ImgCard = styled.img`
-     
+    
+
 `;
 
 export default function WeatherCard({onClose,name,temp,country,weather,id,weatherDesc}) {       //Función generadora del componente tarjeta
@@ -72,7 +73,7 @@ export default function WeatherCard({onClose,name,temp,country,weather,id,weathe
         </div>
         <div>
             <InfoText>{weatherDesc}<br></br></InfoText>
-            <ImgCard src={`../assets/${weather}.png`} alt="Weather Logo"></ImgCard>
+            <ImgCard src={`../assets/${weather}.png`} alt="Weather logo"></ImgCard>
         </div>
     </WhCard>
     )
