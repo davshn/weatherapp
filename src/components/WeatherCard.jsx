@@ -50,7 +50,7 @@ const ImgCard = styled.img`
 `;
 
 export default function WeatherCard({onClose,name,temp,country,weather,id,weatherDesc}) {       //Función generadora del componente tarjeta
-    console.log(weather);
+
     return (                          //Dentro del return hay codigo html xon inserciones de javascript
     <WhCard> 
                                                         {/*WhCard aplica los estilos de la tarjeta de clima, representa una etiqueta <article> */}

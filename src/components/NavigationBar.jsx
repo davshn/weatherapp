@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import SearchBar from "./SearchBar";
+import { Link } from 'react-router-dom';
 
 const NavigationContainer = styled.section`               //Estilo del contenedor de tarjetas
   width: 310px;
@@ -15,7 +16,11 @@ const NavigationContainer = styled.section`               //Estilo del contenedo
 export default function NavigationBar({onSearch}) {
   
   return (
-    <NavigationContainer>    
+    <NavigationContainer>
+      <Link to='/'>             {/*Links a about e inicio*/} 
+      </Link>
+      <Link to='/about'> 
+      </Link>
       <SearchBar onSearch={onSearch}/>
     </NavigationContainer>
   )

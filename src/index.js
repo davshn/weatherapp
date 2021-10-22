@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom'
 import './normalize.css';
 
+
 ReactDOM.render(              //Realiza el render de la app
-  <React.StrictMode>            {/*Invoca la react app*/}
+  <BrowserRouter>            {/*Invoca el router y la react app*/}
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')    //Inyecta el codigo html en la etiqueta root
 );
 
