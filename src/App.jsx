@@ -36,7 +36,7 @@ function App() {
             weatherDesc: resource.weather[0].description,    //Descripcion del clima
             country: resource.sys.country,                   //Pais
             name: resource.name,                             //Nombre de la ciudad
-            weather: resource.weather[0].main,               //Clima
+            weather: resource.weather[0].icon,               //Clima
           };
         setCities(oldCities => [...oldCities, ciudad]);       //Crea un arreglo con todas las ciudades a mostrar
       } else {
