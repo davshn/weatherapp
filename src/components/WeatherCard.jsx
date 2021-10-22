@@ -73,7 +73,7 @@ export default function WeatherCard({onClose,name,temp,country,weather,id,weathe
         </div>
         <div>
             <InfoText>{weatherDesc}<br></br></InfoText>
-            <ImgCard src={`../assets/${weather}.png`} alt="Weather logo"></ImgCard>
+            <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${weather}.png`} alt="Weather logo"></ImgCard>
         </div>
     </WhCard>
     )
