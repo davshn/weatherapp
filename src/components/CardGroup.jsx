@@ -10,17 +10,19 @@ const CardContainer = styled.section`               //Estilo del contenedor de t
 export default function CardGroup({cities,onClose}) {
   
   if(cities){
-    return (
+    return (      //Crea el contenedor de tarjetas y crea cada tarjeta con la informacion de la ciudad
     <CardContainer>    
     {
       cities.map((city)=> <WeatherCard 
-        max={city.max} 
-        min={city.min} 
+        country={city.country} 
+        temp={city.temp} 
         name={city.name} 
-        img={city.img} 
         onClose={onClose}
         key={city.id}
-        id={city.id}/>               
+        id={city.id}
+        weatherDesc={city.weatherDesc.charAt(0).toUpperCase() + city.weatherDesc.slice(1)}
+        weather={city.weather}
+        />               
       )
     }{/*para cada elemento del array cities, crea por funcion flecha una tarjeta de clima para cada elemento*/}
     </CardContainer>
