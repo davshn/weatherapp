@@ -15,7 +15,6 @@ const NavigationContainer = styled.section`               //Estilo del contenedo
 export default function NavigationBar({onSearch}) {
   
   return (
-    
     <NavigationContainer>    
       <SearchBar onSearch={onSearch}/>
     </NavigationContainer>
