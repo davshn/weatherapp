@@ -2,7 +2,6 @@ import styled from "styled-components"
 import SearchBar from "./SearchBar";
 
 const NavigationContainer = styled.section`               //Estilo del contenedor de tarjetas
-  //Tu codigo acá
   width: 310px;
   height: 403x;
   margin-top: 8%;

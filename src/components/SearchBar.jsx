@@ -32,7 +32,7 @@ export default function SearchBar({onSearch}) {
   const [city,setCity]  = useState("") //estado de cambio de ciudad escrita en el buscador
   
       return (
-        <form onSubmit={(e) => {    //Cuando se envía el valor busca en la API
+        <form onSubmit={(e) => {    //Formulario, y funcion de buscar en la app
           e.preventDefault();
           onSearch(city);
         }}>
