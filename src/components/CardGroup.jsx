@@ -14,14 +14,16 @@ export default function CardGroup({cities,onClose}) {
     <CardContainer>    
     {
       cities.map((city)=> <WeatherCard 
-        country={city.country} 
-        temp={city.temp} 
-        name={city.name} 
         onClose={onClose}
         key={city.id}
         id={city.id}
-        weatherDesc={city.weatherDesc.charAt(0).toUpperCase() + city.weatherDesc.slice(1)}
+        name={city.name}
+        country={city.country}  
         weather={city.weather}
+        longitude={city.longitude}
+        latitude={city.latitude}
+        sunrise={city.sunrise}
+        sunset={city.sunset}
         />               
       )
     }{/*para cada elemento del array cities, crea por funcion flecha una tarjeta de clima para cada elemento*/}

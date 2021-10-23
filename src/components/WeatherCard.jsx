@@ -50,8 +50,11 @@ const ImgCard = styled.img`
 
 `;
 
-export default function WeatherCard({onClose,name,temp,country,weather,id,weatherDesc}) {       //Función generadora del componente tarjeta
-
+export default function WeatherCard({onClose,name,id,country,weather,longitude,latitude,sunrise,sunset}) {       //Función generadora del componente tarjeta
+    function getDate(unix){
+        let date=new Date(unix*1000);
+        return date;
+    }
     return (                          //Dentro del return hay codigo html xon inserciones de javascript
     <WhCard> 
                                                         {/*WhCard aplica los estilos de la tarjeta de clima, representa una etiqueta <article> */}
@@ -67,15 +70,18 @@ export default function WeatherCard({onClose,name,temp,country,weather,id,weathe
             </Link>
         </div>
         <div>
-            <InfoText>Temp </InfoText>                                {/*Aplica los estilos de texto, representa una etiqueta <span>*/}
-            <InfoText>Pais <br></br></InfoText>
+            <InfoText>Pais:</InfoText>
+            <InfoText>{country} <br></br></InfoText>                      {/*Aplica los estilos de texto, representa una etiqueta <span>*/}
+            <InfoText>Longitud:</InfoText>
+            <InfoText>{longitude} <br></br></InfoText>
+            <InfoText>Latitud:</InfoText>
+            <InfoText>{latitude} <br></br></InfoText>
+            <InfoText>Salida del sol:</InfoText>
+            <InfoText>{getDate(sunrise).getHours()+":"+getDate(sunrise).getMinutes()} <br></br></InfoText>
+            <InfoText>Puesta del sol:</InfoText>
+            <InfoText>{getDate(sunset).getHours()+":"+getDate(sunset).getMinutes()} <br></br></InfoText>
         </div>
         <div>
-            <InfoText>{temp+"° "}</InfoText> 
-            <InfoText>{country} <br></br></InfoText>
-        </div>
-        <div>
-            <InfoText>{weatherDesc}<br></br></InfoText>
             <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${weather}.png`} alt="Weather logo"></ImgCard>
         </div>
     </WhCard>
