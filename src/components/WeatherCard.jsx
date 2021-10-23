@@ -77,7 +77,7 @@ export default function WeatherCard({onClose,name,id,country,weather,longitude,l
             <InfoText>{getDate(sunrise).getHours()+":"+getDate(sunrise).getMinutes()} <br></br></InfoText>
             <InfoText>Puesta del sol:</InfoText>
             <InfoText>{getDate(sunset).getHours()+":"+getDate(sunset).getMinutes()} <br></br></InfoText>
-            <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${weather}.png`} alt="Imagen Dia o noche"></ImgCard>
+            <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${weather[2]}.png`} alt="Imagen Dia o noche"></ImgCard>
     </WhCard>
     )
 };
