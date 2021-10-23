@@ -58,7 +58,6 @@ export default function WeatherCard({onClose,name,id,country,weather,longitude,l
     return (                          //Dentro del return hay codigo html xon inserciones de javascript
     <WhCard> 
                                                         {/*WhCard aplica los estilos de la tarjeta de clima, representa una etiqueta <article> */}
-        <div>
             <CloseButton onClick={(e) => {
                 e.preventDefault();
                 onClose(id);
@@ -68,8 +67,6 @@ export default function WeatherCard({onClose,name,id,country,weather,longitude,l
             <Link to={`/city/${id}`} >
             <TitleCard>{name}</TitleCard>                    {/*Aplica los estilos del titulo de tarjetas, representa una etiqueta <h3>*/}
             </Link>
-        </div>
-        <div>
             <InfoText>Pais:</InfoText>
             <InfoText>{country} <br></br></InfoText>                      {/*Aplica los estilos de texto, representa una etiqueta <span>*/}
             <InfoText>Longitud:</InfoText>
@@ -80,10 +77,7 @@ export default function WeatherCard({onClose,name,id,country,weather,longitude,l
             <InfoText>{getDate(sunrise).getHours()+":"+getDate(sunrise).getMinutes()} <br></br></InfoText>
             <InfoText>Puesta del sol:</InfoText>
             <InfoText>{getDate(sunset).getHours()+":"+getDate(sunset).getMinutes()} <br></br></InfoText>
-        </div>
-        <div>
-            <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${weather}.png`} alt="Weather logo"></ImgCard>
-        </div>
+            <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${weather}.png`} alt="Imagen Dia o noche"></ImgCard>
     </WhCard>
     )
 };

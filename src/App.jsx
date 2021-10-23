@@ -20,7 +20,7 @@ function onSearch(city) {                   //Funcion buscadora, trae la informa
         const city = {
           longitude:resource.coord.lon,
           latitude:resource.coord.lon,
-          temalSense:Math.round(resource.main.feels_like*10)/10,
+          termalSense:Math.round(resource.main.feels_like*10)/10,
           temp: Math.round(resource.main.temp*10)/10,
           pressure:resource.main.pressure,
           humidity:resource.main.humidity,
@@ -30,7 +30,9 @@ function onSearch(city) {                   //Funcion buscadora, trae la informa
           weatherDesc: resource.weather[0].description,    //Descripcion del clima
           country: resource.sys.country,                   //Pais
           name: resource.name,                             //Nombre de la ciudad
-          weather: resource.weather[0].icon,               //Clima
+          weather: resource.weather[0].icon,
+          wind:resource.wind.speed,
+          clouds:resource.clouds.all               //Clima
         };
       setCities(oldCities => [...oldCities, city]);       //Crea un arreglo con todas las ciudades a mostrar
     } else {
