@@ -2,6 +2,7 @@ import styled from "styled-components"
 import {CloseButton} from './CloseButtonStyled';
 import propTypes from "prop-types";
 import fondo from "../assets/fondo.jpg";
+import { Link } from "react-router-dom";
 
 const WhCard = styled.article`               //Estilo de la tarjeta de clima
     background-image:url("${fondo}");
@@ -61,7 +62,9 @@ export default function WeatherCard({onClose,name,temp,country,weather,id,weathe
             }}>
             X
             </CloseButton>   {/*Aplica los estilos de boton cerrar, representa una etiqueta <Button>*/}
+            <Link to={`/ciudad/${id}`} >
             <TitleCard>{name}</TitleCard>                    {/*Aplica los estilos del titulo de tarjetas, representa una etiqueta <h3>*/}
+            </Link>
         </div>
         <div>
             <InfoText>Temp </InfoText>                                {/*Aplica los estilos de texto, representa una etiqueta <span>*/}

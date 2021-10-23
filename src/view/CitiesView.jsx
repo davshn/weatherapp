@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import NavigationBar from '../components/NavigationBar';
 import CardGroup from '../components/CardGroup';
+import fetchCity from "../model/fetchCity"
 
 const CitiesContainer = styled.main`
   border: 2px #000 solid;
