@@ -1,18 +1,10 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import fetchCity from "../model/fetchCity"
 
 
-export default function CityExtended({id}) {
-const [city, setCity] = useState();
-    useEffect(() => {
-        fetchCity(id, setCity);
-      }, [id, setCity]);
+export default function CityExtended({city}) {
 
-      console.log(city);
     return (
         <div>
-            Soy una ciudad
+            <h2>{city.name}</h2>
         </div>    
     
     )
