@@ -62,7 +62,7 @@ export default function WeatherCard({onClose,name,temp,country,weather,id,weathe
             }}>
             X
             </CloseButton>   {/*Aplica los estilos de boton cerrar, representa una etiqueta <Button>*/}
-            <Link to={`/ciudad/${id}`} >
+            <Link to={`/city/${id}`} >
             <TitleCard>{name}</TitleCard>                    {/*Aplica los estilos del titulo de tarjetas, representa una etiqueta <h3>*/}
             </Link>
         </div>

@@ -35,10 +35,8 @@ export default function NavigationBar({onSearch}) {
   
   return (
     <NavigationContainer>
-      <Link to='/'>             {/*Links a about e inicio*/} 
-      </Link>
-      <Link to='/about'>
-      <Button>Acerca de mi</Button>
+      <Link to='/about'>            {/*Link a about */} 
+      <Button>Acerca de</Button>
       </Link>
       <SearchBar onSearch={onSearch}/>
     </NavigationContainer>

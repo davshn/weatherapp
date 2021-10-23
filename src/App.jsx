@@ -1,7 +1,7 @@
 import { Route } from 'react-router-dom';
 import About from './view/About';
 import Citiesview from './view/CitiesView';
-import CityExtended from './view/CitiesView';
+import CityExtended from './view/CityExtended';
 import { useState } from 'react';
 
 export default function App() {
@@ -13,7 +13,7 @@ function onClose(id) {                                    //Funcion para cerrar 
   }
 
 function onSearch(ciudad) {                   //Funcion buscadora, trae la informacion de la API
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&lang=sp&appid=${apiKey}&units=metric`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&lang=sp&appid=${apiKey}&units=metric`)
   .then(data => data.json())
     .then((resource) => {
       if(resource.main !== undefined){
@@ -31,10 +31,10 @@ function onSearch(ciudad) {                   //Funcion buscadora, trae la infor
     }
   });
   }
-function onFilter(ciudadId) {
-  let ciudad = cities.filter(c => c.id === parseInt(ciudadId));
-  if(ciudad.length > 0) {
-      return ciudad[0];
+function onFilter(cityId) {
+  let city = cities.filter(c => c.id === parseInt(cityId));
+  if(city.length > 0) {
+      return city[0];
   } else {
       return null;
   }
@@ -43,7 +43,7 @@ function onFilter(ciudadId) {
   return (
     <>                     {/*Si la ruta es / renderiza CitiesView, si la ruta es /about va a about*/}
       <Route
-        path='/' exact
+        exact path='/'
         render={() => <Citiesview 
           onSearch={onSearch}
           cities={cities} 
@@ -56,8 +56,8 @@ function onFilter(ciudadId) {
       />
       <Route
         exact path="/city/:id"
-        render={({match}) => <CityExtended city=
-        {onFilter(match.params.ciudadId)}/>}
+        render={() => <CityExtended 
+        onFilter={onFilter}/>}
       />
     </>
   );

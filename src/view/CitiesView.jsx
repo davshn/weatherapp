@@ -22,9 +22,4 @@ export default function Citiesview({onSearch,cities,onClose}){
         /> 
     </CitiesContainer>
   )
-
-
-
-
-
 }
