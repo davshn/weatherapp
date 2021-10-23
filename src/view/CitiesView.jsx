@@ -2,7 +2,6 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import NavigationBar from '../components/NavigationBar';
 import CardGroup from '../components/CardGroup';
-import fetchCity from "../model/fetchCity"
 
 const CitiesContainer = styled.main`
   border: 2px #000 solid;
@@ -21,24 +20,24 @@ export default function Citiesview(){
     setCities(oldCities => oldCities.filter(c => c.id !== id));
   }
 
-  function onSearch(ciudad) {                   //Funcion buscadora, trae la informacion de la API
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&lang=sp&appid=${apiKey}&units=metric`)
-    .then(data => data.json())
-      .then((resource) => {
-        if(resource.main !== undefined){
-          const ciudad = {
-            temp: Math.round(resource.main.temp*10)/10,      //Temperatura
-            id: resource.id,                                 //Codigo unico ciudad
-            weatherDesc: resource.weather[0].description,    //Descripcion del clima
-            country: resource.sys.country,                   //Pais
-            name: resource.name,                             //Nombre de la ciudad
-            weather: resource.weather[0].icon,               //Clima
-          };
-        setCities(oldCities => [...oldCities, ciudad]);       //Crea un arreglo con todas las ciudades a mostrar
-      } else {
-       alert("Ciudad no encontrada");                        //Mensaje si no encuentra una ciudad
-      }
-    });
+function onSearch(ciudad) {                   //Funcion buscadora, trae la informacion de la API
+  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&lang=sp&appid=${apiKey}&units=metric`)
+  .then(data => data.json())
+    .then((resource) => {
+      if(resource.main !== undefined){
+        const ciudad = {
+          temp: Math.round(resource.main.temp*10)/10,      //Temperatura
+          id: resource.id,                                 //Codigo unico ciudad
+          weatherDesc: resource.weather[0].description,    //Descripcion del clima
+          country: resource.sys.country,                   //Pais
+          name: resource.name,                             //Nombre de la ciudad
+          weather: resource.weather[0].icon,               //Clima
+        };
+      setCities(oldCities => [...oldCities, ciudad]);       //Crea un arreglo con todas las ciudades a mostrar
+    } else {
+      alert("Ciudad no encontrada");                        //Mensaje si no encuentra una ciudad
+    }
+  });
   }
 
   
