@@ -7,8 +7,6 @@ const ImgCard = styled.img`
 `;
 export default function About() {
 
-
-
 return (
     <div>
         <Link to='/'>

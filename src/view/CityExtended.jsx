@@ -10,7 +10,7 @@ const ExtendedContainer = styled.section`
 `
 
 const DetailedCard = styled.article` 
-
+    border:1px black solid;
 
 
 `
@@ -19,17 +19,13 @@ const TitleCard = styled.h2`
     -webkit-text-stroke: 1px white;
     color: black; text-align: center;
     font-size: 37px;
-    margin-left: 0%;
     font-family: Arial, Helvetica, sans-serif;
 `;
 
 const InfoText = styled.span`
-    width: 100px;
     border: 1px #ccc solid;
-    margin: 0px;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: justify;
 `;
 
 const ImgCard = styled.img`

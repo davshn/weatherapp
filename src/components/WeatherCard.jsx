@@ -5,13 +5,13 @@ import fondo from "../assets/fondo.jpg";
 import { Link } from "react-router-dom";
 
 const WhCard = styled.article`               //Estilo de la tarjeta de clima
+    display:grid;                               //crea una cuadricula
+    grid-template-columns:repeat(2,1fr);        //2 columnas iguales de grandes
+    grid-template-rows:repeat(3,1fr);                 //1 columna de una tercera parte del tamaño de la segunda
+    position:relative;
+    align-items:center;
     background-image:url("${fondo}");
-    display: inline-block;
-    width: 200px;
-    margin: 25px;
-    margin-top: 8%;
-    margin-left: 12%;
-    border-radius: 10%;
+    border-radius: 0.5rem;
     -webkit-box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
     -moz-box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
     box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
@@ -28,26 +28,38 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
     }
 `;
 //estilo para los titulos de las cartas
-const TitleCard = styled.h3`
+const Routlink= styled(Link)`
+    grid-column: 1/span 2;
+    text-align: center;
+    text-decoration: none;
+
+`
+
+const TitleCard = styled.span`
     -webkit-text-stroke: 1px white;
-    color: transparent; text-align: center;
-    font-size: 37px;
-    margin-left: 0%;
+    color: transparent; 
+    font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 `;
 
 const InfoText = styled.span`
-    width: 100px;
-    border: 1px #ccc solid;
-    margin: 0px;
     color: #fdfdfd;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: justify;
-`;
-
-const ImgCard = styled.img`
     
-
+`;
+const InfoCountry = styled.span`
+    grid-column: 1/span 2;
+    color: #fdfdfd;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+`;
+const ImgCard = styled.img`
+    grid-column: 1/span 2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 `;
 
 export default function WeatherCard({onClose,name,id,country,weather,longitude,latitude,sunrise,sunset}) {       //Función generadora del componente tarjeta
@@ -64,19 +76,14 @@ export default function WeatherCard({onClose,name,id,country,weather,longitude,l
             }}>
             X
             </CloseButton>   {/*Aplica los estilos de boton cerrar, representa una etiqueta <Button>*/}
-            <Link to={`/city/${id}`} >
+            <Routlink to={`/city/${id}`} >
             <TitleCard>{name}</TitleCard>                    {/*Aplica los estilos del titulo de tarjetas, representa una etiqueta <h3>*/}
-            </Link>
-            <InfoText>Pais:</InfoText>
-            <InfoText>{country} <br></br></InfoText>                      {/*Aplica los estilos de texto, representa una etiqueta <span>*/}
-            <InfoText>Longitud:</InfoText>
-            <InfoText>{longitude} <br></br></InfoText>
-            <InfoText>Latitud:</InfoText>
-            <InfoText>{latitude} <br></br></InfoText>
-            <InfoText>Salida del sol:</InfoText>
-            <InfoText>{getDate(sunrise).getHours()+":"+getDate(sunrise).getMinutes()} <br></br></InfoText>
-            <InfoText>Puesta del sol:</InfoText>
-            <InfoText>{getDate(sunset).getHours()+":"+getDate(sunset).getMinutes()} <br></br></InfoText>
+            </Routlink>
+            <InfoCountry>{`Pais: ${country}`}</InfoCountry>       {/*Aplica los estilos de texto, representa una etiqueta <span>*/}
+            <InfoText>{`Longitud: ${longitude}`}</InfoText> 
+            <InfoText>{`Latitud: ${latitude}`}</InfoText> 
+            <InfoText>{`Salida del sol: ${getDate(sunrise).getHours()+":"+getDate(sunrise).getMinutes()}`}</InfoText> 
+            <InfoText>{`Puesta del sol: ${getDate(sunset).getHours()+":"+getDate(sunset).getMinutes()}`}</InfoText> 
             <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${weather[2]}.png`} alt="Imagen Dia o noche"></ImgCard>
     </WhCard>
     )
