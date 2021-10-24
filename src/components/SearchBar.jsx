@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { useState } from "react";
-//Estilo para los botones de la aplicacion
-const SubmitButton = styled.input`
 
+//Estilo para los botones 
+const SubmitButton = styled.input`
+  position: absolute;
+  right:0.5rem;
   border-radius: 5px;
   color: #fff;
   background: transparent;
@@ -18,7 +20,9 @@ const SubmitButton = styled.input`
 }
 `
 const TextSearch = styled.input`
-
+  width:100%;
+  padding:0.25rem 4rem 0.25rem 0.25rem;
+  box-sizing:border-box;
   border-radius: 5px;
   border: #fff 1px solid;
   opacity: 0.6;
@@ -41,7 +45,8 @@ export default function SearchBar({onSearch}) {
             type="text"
             placeholder="Ciudad..."
           />
-          <SubmitButton type="submit" value="Agregar" />
+          <SubmitButton type="submit" value="Buscar"/> 
+          
         </form>
       );
     }

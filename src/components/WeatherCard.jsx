@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import {CloseButton} from './CloseButtonStyled';
 import propTypes from "prop-types";
-import fondo from "../assets/fondo.jpg";
+import day from "../assets/dia.jpg";
+import night from "../assets/noche.jpg";
 import { Link } from "react-router-dom";
 
 const WhCard = styled.article`               //Estilo de la tarjeta de clima
@@ -10,13 +11,19 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
     grid-template-rows:repeat(3,1fr);                 //1 columna de una tercera parte del tamaño de la segunda
     position:relative;
     align-items:center;
-    background-image:url("${fondo}");
     border-radius: 0.5rem;
     -webkit-box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
     -moz-box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
     box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
+    background: ${(props)=> props.current === "d" ? `url(${day})` : `url(${night})`};
 
-    &:hover{
+    @media (min-width:576px){                            //responsive para escritorio
+        width:16rem;                                     //1 rem = 16px en pantallas de pc
+        height:18rem;    
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(7,1fr);
+        
+        &:hover{
         transform : scale(1.1);
 	    -moz-transform : scale(1.1); /* Firefox */
 	    -webkit-transform : scale(1.1); /* Chrome - Safari */
@@ -25,14 +32,19 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
         -webkit-box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
         -moz-box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
         box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
-    }
+        }
+    }                                          
+  
 `;
 //estilo para los titulos de las cartas
 const Routlink= styled(Link)`
     grid-column: 1/span 2;
     text-align: center;
     text-decoration: none;
-
+    
+    @media (min-width:576px){                            //responsive para escritorio
+        grid-column: 1;                         
+    }              
 `
 
 const TitleCard = styled.span`
@@ -53,12 +65,18 @@ const InfoCountry = styled.span`
     color: #fdfdfd;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @media (min-width:576px){                            //responsive para escritorio
+        grid-column: 1;                         
+    }  
 `;
 const ImgCard = styled.img`
     grid-column: 1/span 2;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width:576px){                            //responsive para escritorio
+        grid-column: 1;                         
+    } 
     
 `;
 
@@ -67,8 +85,10 @@ export default function WeatherCard({onClose,name,id,country,weather,longitude,l
         let date=new Date(unix*1000);
         return date;
     }
+
+    console.log (typeof weather)
     return (                          //Dentro del return hay codigo html xon inserciones de javascript
-    <WhCard> 
+    <WhCard current={weather}> 
                                                         {/*WhCard aplica los estilos de la tarjeta de clima, representa una etiqueta <article> */}
             <CloseButton onClick={(e) => {
                 e.preventDefault();
@@ -84,7 +104,7 @@ export default function WeatherCard({onClose,name,id,country,weather,longitude,l
             <InfoText>{`Latitud: ${latitude}`}</InfoText> 
             <InfoText>{`Salida del sol: ${getDate(sunrise).getHours()+":"+getDate(sunrise).getMinutes()}`}</InfoText> 
             <InfoText>{`Puesta del sol: ${getDate(sunset).getHours()+":"+getDate(sunset).getMinutes()}`}</InfoText> 
-            <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${weather[2]}.png`} alt="Imagen Dia o noche"></ImgCard>
+            <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${weather}.png`} alt="Imagen Dia o noche"></ImgCard>
     </WhCard>
     )
 };

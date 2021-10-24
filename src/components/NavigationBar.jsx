@@ -17,7 +17,7 @@ const Button = styled.button`
   background: transparent;
   border: #fff 2px solid;
   font-weight: bolder;
-
+  
 &:hover{
   transform : scale(0.9);
 		-moz-transform : scale(0.9); /* Firefox */

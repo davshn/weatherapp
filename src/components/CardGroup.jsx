@@ -3,7 +3,19 @@ import styled from "styled-components"
 import propTypes from "prop-types";
 
 const CardContainer = styled.section`               //Estilo del contenedor de tarjetas
+  display:flex;
+  flex-direction:column;                            //organiza en columnas las tarjetas
+  gap:0.5rem;                                       //Separacion de las tarjetas
+  padding-top:1rem;
 
+
+  @media (min-width:576px){                            //responsive para escritorio
+    flex-direction:row;                             //organiza en fila las tarjetas
+    flex-wrap: wrap;                                //Cuando se llene la fila crea una nueva fila
+    justify-content:center;                               
+    gap:5rem;
+    padding-top:2rem;
+  }                                          
 
 `;
 
@@ -18,8 +30,8 @@ export default function CardGroup({cities,onClose}) {
         key={city.id}
         id={city.id}
         name={city.name}
-        country={city.country}  
-        weather={city.weather}
+        country={city.country}
+        weather={city.weather[2]}
         longitude={city.longitude}
         latitude={city.latitude}
         sunrise={city.sunrise}
