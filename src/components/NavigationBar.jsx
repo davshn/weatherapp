@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import SearchBar from "./SearchBar";
 import { Link } from 'react-router-dom';
+import icon from '../assets/Weather icon.png';
 
 const NavigationContainer = styled.section`               //Estilo del contenedor de tarjetas
   width: 310px;
@@ -29,14 +30,20 @@ const Button = styled.button`
 		-o-transform : scale(0.9); /* Opera */
 		-ms-transform : scale(0.9); /* IE9 */
 }
-`
+`;
+const ImgCard = styled.img`
+    
+
+`;
+
 
 export default function NavigationBar({onSearch}) {
   
   return (
     <NavigationContainer>
+      <ImgCard src={icon}></ImgCard>
       <Link to='/about'>            {/*Link a about */} 
-      <Button>Acerca de</Button>
+        <Button>Acerca de</Button>
       </Link>
       <SearchBar onSearch={onSearch}/>
     </NavigationContainer>

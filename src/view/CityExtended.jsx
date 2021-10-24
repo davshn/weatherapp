@@ -1,6 +1,7 @@
 import { useParams } from "react-router"
 import styled from "styled-components"
 import icon from "../assets/Weather icon.png";
+import { Link } from 'react-router-dom';
 
 const ExtendedContainer = styled.section` 
 
@@ -41,7 +42,9 @@ export default function CityExtended({onFilter}) {
     return (
         <ExtendedContainer>
             <DetailedCard>
-                <ImgCard src={icon}></ImgCard>
+                <Link to='/'>
+                    <ImgCard src={icon}></ImgCard>
+                </Link>
                 <TitleCard>{city.name}</TitleCard>
                 <InfoText>Temperatura:</InfoText>
                 <InfoText>{city.temp}°<br></br></InfoText>
