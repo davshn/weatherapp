@@ -85,8 +85,6 @@ export default function WeatherCard({onClose,name,id,country,weather,longitude,l
         let date=new Date(unix*1000);
         return date;
     }
-
-    console.log (typeof weather)
     return (                          //Dentro del return hay codigo html xon inserciones de javascript
     <WhCard current={weather}> 
                                                         {/*WhCard aplica los estilos de la tarjeta de clima, representa una etiqueta <article> */}

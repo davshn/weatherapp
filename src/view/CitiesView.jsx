@@ -5,14 +5,21 @@ import icon from '../assets/Weather icon.png';
 
 const CitiesContainer = styled.main`
   border: 2px #000 solid;
-
-
-  border-radius: 15px;
-  background: linear-gradient(45deg, #d9f9ff 0%, #c9e2ff 55%, rgba(2,0,36,1) 100%);
+  background: linear-gradient(180deg, rgba(54,59,68,1) 0%, rgba(72,70,91,1) 35%, rgba(141,162,164,1) 100%);
+  height:100vh;
 `
 const ImgCard = styled.img`
-    
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:5%;
+    margin-bottom:5%;
+    width:20%;
+    @media (min-width:576px){                            //responsive para escritorio
+      margin-top:1%;
+      margin-bottom:1%;
+      width:6%;                     
+    }
 `;
 export default function Citiesview({onSearch,cities,onClose}){
 
