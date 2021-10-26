@@ -2,12 +2,11 @@ import styled from 'styled-components';
 import NavigationBar from '../components/NavigationBar';
 import CardGroup from '../components/CardGroup';
 import icon from '../assets/Weather icon.png';
+import { Link } from 'react-router-dom';
+import {ContainerStyled} from "../components/ContainerStyled";
+import BubbleStyled from "../components/BubbleStyled";
+import bubble from "../assets/bubble.png";
 
-const CitiesContainer = styled.main`
-  border: 2px #000 solid;
-  background: linear-gradient(180deg, rgba(54,59,68,1) 0%, rgba(72,70,91,1) 35%, rgba(141,162,164,1) 100%);
-  height:100vh;
-`
 const ImgCard = styled.img`
     display: block;
     margin-left: auto;
@@ -22,15 +21,18 @@ const ImgCard = styled.img`
     }
 `;
 export default function Citiesview({onSearch,cities,onClose}){
-
   return (
-    <CitiesContainer>
-        <ImgCard src={icon}></ImgCard>
+    <ContainerStyled>
+      <BubbleStyled src={bubble}></BubbleStyled>
+        <Link to='/about'>            {/*Link a about */} 
+            <ImgCard src={icon}></ImgCard>
+        </Link>
+        
         <NavigationBar onSearch={onSearch}/>
         <CardGroup
           cities={cities}
           onClose={onClose}
         /> 
-    </CitiesContainer>
+    </ContainerStyled>
   )
 }

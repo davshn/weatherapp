@@ -2,12 +2,7 @@ import { useParams } from "react-router"
 import styled from "styled-components"
 import icon from "../assets/Weather icon.png";
 import { Link } from 'react-router-dom';
-
-const ExtendedContainer = styled.section` 
-    background: linear-gradient(180deg, rgba(54,59,68,1) 0%, rgba(72,70,91,1) 35%, rgba(141,162,164,1) 100%);
-    height:100vh;
-
-`
+import {ContainerStyled} from "../components/ContainerStyled";
 
 const DetailedCard = styled.article` 
     margin:10%;
@@ -21,8 +16,6 @@ const DetailedCard = styled.article`
         margin:5% 37%;
     }
     
-
-
 `
 
 const TitleCard = styled.h2`
@@ -47,24 +40,23 @@ const InfoText = styled.span`
 `;
 
 const ImgCard = styled.img`
-    padding-top:10%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top:5%;
+    margin-bottom:5%;
     width:20%;
-    
-    @media (min-width:576px){ 
-        padding-top:5%;                           //responsive para escritorio
-        width:8rem;
-
-    } 
+    @media (min-width:576px){                            //responsive para escritorio
+      padding-top:1%;
+      margin-bottom:1%;
+      width:6%;                     
+    }
 `;
 
 export default function CityExtended({onFilter}) {
     let city= onFilter(useParams().id)
     return (
-        <ExtendedContainer>
-            
+        <ContainerStyled>
             <Link to='/'>
                 <ImgCard src={icon}></ImgCard>
             </Link>
@@ -86,7 +78,7 @@ export default function CityExtended({onFilter}) {
                 <InfoText>{city.weatherDesc}</InfoText>
                 <ImgCard src={`https://github.com/davshn/weatherapp/raw/master/src/assets/${city.weather}.png`} alt="Imagen del clima"></ImgCard>
             </DetailedCard>
-        </ExtendedContainer>    
+        </ContainerStyled>    
     )
  
     }

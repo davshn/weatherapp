@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import SearchBar from "./SearchBar";
-import { Link } from 'react-router-dom';
 
 const NavigationContainer = styled.section`               //Estilo del contenedor de tarjetas
 
@@ -11,31 +10,11 @@ const NavigationContainer = styled.section`               //Estilo del contenedo
 
 `;
 
-const Button = styled.button`
-  border-radius: 5px;
-  color: #fff;
-  background: transparent;
-  border: #fff 2px solid;
-  font-weight: bolder;
-  
-&:hover{
-  transform : scale(0.9);
-		-moz-transform : scale(0.9); /* Firefox */
-		-webkit-transform : scale(0.9); /* Chrome - Safari */
-		-o-transform : scale(0.9); /* Opera */
-		-ms-transform : scale(0.9); /* IE9 */
-}
-`;
-
-
 
 export default function NavigationBar({onSearch}) {
   
   return (
     <NavigationContainer>
-      <Link to='/about'>            {/*Link a about */} 
-        <Button>Acerca de</Button>
-      </Link>
       <SearchBar onSearch={onSearch}/>
     </NavigationContainer>
   )
