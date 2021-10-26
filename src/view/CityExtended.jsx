@@ -50,7 +50,7 @@ const DetailedCard = styled.article`
 
     @media (min-width:576px){                            //responsive para escritorio
         width:20%;
-        margin:5% 37%;
+        margin:5% 40%;
     }
     
 `;
