@@ -4,6 +4,7 @@ import icon from "../assets/Weather icon.png";
 import { Link } from 'react-router-dom';
 import {ContainerStyled} from "../components/ContainerStyled";
 import Bubbles from "../components/Bubbles";
+import { HomeImg } from "../components/HomeStyled";
 
 const DetailedCard = styled.article` 
     margin:10%;
@@ -50,7 +51,7 @@ const ImgCard = styled.img`
     @media (min-width:576px){                            //responsive para escritorio
       padding-top:1%;
       margin-bottom:1%;
-      width:6%;                     
+      width:15%;                     
     }
 `;
 
@@ -60,7 +61,7 @@ export default function CityExtended({onFilter}) {
         <ContainerStyled>
             <Bubbles></Bubbles>
             <Link to='/'>
-                <ImgCard src={icon}></ImgCard>
+                <HomeImg src={icon}></HomeImg>
             </Link>
             <DetailedCard>
                 <TitleCard>{city.name}</TitleCard>
@@ -82,5 +83,4 @@ export default function CityExtended({onFilter}) {
             </DetailedCard>
         </ContainerStyled>    
     )
- 
     }
