@@ -3,6 +3,7 @@ import styled from "styled-components"
 import icon from "../assets/Weather icon.png";
 import { Link } from 'react-router-dom';
 import {ContainerStyled} from "../components/ContainerStyled";
+import Bubbles from "../components/Bubbles";
 
 const DetailedCard = styled.article` 
     margin:10%;
@@ -57,6 +58,7 @@ export default function CityExtended({onFilter}) {
     let city= onFilter(useParams().id)
     return (
         <ContainerStyled>
+            <Bubbles></Bubbles>
             <Link to='/'>
                 <ImgCard src={icon}></ImgCard>
             </Link>

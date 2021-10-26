@@ -4,8 +4,7 @@ import CardGroup from '../components/CardGroup';
 import icon from '../assets/Weather icon.png';
 import { Link } from 'react-router-dom';
 import {ContainerStyled} from "../components/ContainerStyled";
-import BubbleStyled from "../components/BubbleStyled";
-import bubble from "../assets/bubble.png";
+import Bubbles from "../components/Bubbles";
 
 const ImgCard = styled.img`
     display: block;
@@ -21,19 +20,12 @@ const ImgCard = styled.img`
     }
 `;
 export default function Citiesview({onSearch,cities,onClose}){
-  const left=()=>Math.floor(Math.random() * 95);
-  const time=()=>Math.floor(Math.random() * 40)+10; 
   return (
     <ContainerStyled>
-      <BubbleStyled src={bubble} left={left} time={time}></BubbleStyled>
-      <BubbleStyled src={bubble} left={left} time={time}></BubbleStyled>
-      <BubbleStyled src={bubble} left={left} time={time}></BubbleStyled>
-      <BubbleStyled src={bubble} left={left} time={time}></BubbleStyled>
-
+      <Bubbles></Bubbles>
       <Link to='/about'>            {/*Link a about */} 
             <ImgCard src={icon}></ImgCard>
         </Link>
-        
         <NavigationBar onSearch={onSearch}/>
         <CardGroup
           cities={cities}
