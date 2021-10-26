@@ -11,7 +11,7 @@ const BubbleStyled= styled.img`
  position: absolute;
  width: 3%;
  left: ${({ left }) => (left ? left : 10)}%;
- animation: ${floatAnimation()} ${({ time }) => (time ? time : 10)}s ease-in-out none;
+ animation: ${floatAnimation()} ${({ time }) => (time ? time : 10)}s ease-in-out forwards infinite;
 
 `;
 
