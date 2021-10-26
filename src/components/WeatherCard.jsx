@@ -82,7 +82,7 @@ const ImgCard = styled.img`
 
 export default function WeatherCard({onClose,name,id,country,weather,longitude,latitude,sunrise,sunset}) {       //Función generadora del componente tarjeta
     function getDate(unix){
-        let date=new Date(unix*1000);
+    let date=new Date(unix*1000);
         return date;
     }
     return (                          //Dentro del return hay codigo html xon inserciones de javascript

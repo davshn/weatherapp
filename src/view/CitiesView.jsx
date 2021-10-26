@@ -22,7 +22,7 @@ const ImgCard = styled.img`
 `;
 export default function Citiesview({onSearch,cities,onClose}){
   const left=()=>Math.floor(Math.random() * 95);
-  const time=()=>Math.floor(Math.random() * 10)+4; 
+  const time=()=>Math.floor(Math.random() * 40)+10; 
   return (
     <ContainerStyled>
       <BubbleStyled src={bubble} left={left} time={time}></BubbleStyled>
