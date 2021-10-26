@@ -5,6 +5,18 @@ import { Link } from 'react-router-dom';
 import {ContainerStyled} from "../components/ContainerStyled";
 import Bubbles from "../components/Bubbles";
 import { HomeImg } from "../components/HomeStyled";
+import despejadoDia from "../assets/despejadoDia.jpg";
+import despejadoNoche from "../assets/despejadoNoche.jpg";
+import nubesDia from "../assets/nubesDia.jpg";
+import nubesNoche from "../assets/nubesNoche.jpg";
+import nublado from "../assets/nublado.jpg";
+import lluviaDia from "../assets/lluviaDia.jpg";
+import lluviaNoche from "../assets/lluviaNoche.jpg";
+import tormentaDia from "../assets/tormentaDia.jpg";
+import tormentaNoche from "../assets/tormentaNoche.jpg";
+import nieveDia from "../assets/nieveDia.jpg";
+import nieveNoche from "../assets/nieveNoche.jpg";
+import neblina from "../assets/neblina.jpg";
 
 const DetailedCard = styled.article` 
     margin:10%;
@@ -13,12 +25,35 @@ const DetailedCard = styled.article`
     border:1px black solid;
     border-radius:10%;
     width: 80%;
+    background: ${(props)=> { 
+        switch (props.current){
+            case "01d": return `url(${despejadoDia})`
+            case "02d": return `url(${nubesDia})`
+            case "03d": return `url(${nublado})`
+            case "04d": return `url(${nublado})`
+            case "09d": return `url(${lluviaDia})`
+            case "10d": return `url(${lluviaDia})`
+            case "11d": return `url(${tormentaDia})`
+            case "13d": return `url(${nieveDia})`
+            case "01n": return `url(${despejadoNoche})`
+            case "02n": return `url(${nubesNoche})`
+            case "03n": return `url(${nublado})`
+            case "04n": return `url(${nublado})`
+            case "09n": return `url(${lluviaNoche})`
+            case "10n": return `url(${lluviaNoche})`
+            case "11n": return `url(${tormentaNoche})`
+            case "13n": return `url(${nieveNoche})`
+            default: return `url(${neblina})`
+       }
+
+    }};
+
     @media (min-width:576px){                            //responsive para escritorio
-        width:25%;
+        width:20%;
         margin:5% 37%;
     }
     
-`
+`;
 
 const TitleCard = styled.h2`
     -webkit-text-stroke: 1px white;
@@ -63,7 +98,7 @@ export default function CityExtended({onFilter}) {
             <Link to='/'>
                 <HomeImg src={icon}></HomeImg>
             </Link>
-            <DetailedCard>
+            <DetailedCard current={city.weather}>
                 <TitleCard>{city.name}</TitleCard>
                 <InfoTitle>Temperatura:</InfoTitle>
                 <InfoText>{city.temp}°</InfoText>
