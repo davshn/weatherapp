@@ -21,10 +21,16 @@ const ImgCard = styled.img`
     }
 `;
 export default function Citiesview({onSearch,cities,onClose}){
+  const left=()=>Math.floor(Math.random() * 95);
+  const time=()=>Math.floor(Math.random() * 10)+4; 
   return (
     <ContainerStyled>
-      <BubbleStyled src={bubble}></BubbleStyled>
-        <Link to='/about'>            {/*Link a about */} 
+      <BubbleStyled src={bubble} left={left} time={time}></BubbleStyled>
+      <BubbleStyled src={bubble} left={left} time={time}></BubbleStyled>
+      <BubbleStyled src={bubble} left={left} time={time}></BubbleStyled>
+      <BubbleStyled src={bubble} left={left} time={time}></BubbleStyled>
+
+      <Link to='/about'>            {/*Link a about */} 
             <ImgCard src={icon}></ImgCard>
         </Link>
         

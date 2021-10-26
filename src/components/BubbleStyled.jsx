@@ -9,10 +9,10 @@ const floatAnimation = (one, two) => keyframes`
 
 const BubbleStyled= styled.img`
  position: absolute;
- width: 50px;
- left: ${Math.floor(Math.random() * 100)}%;
+ width: 3%;
+ left: ${({ left }) => (left ? left : 10)}%;
  animation: ${({ one, two }) => floatAnimation(one, two)}
-    ${Math.floor(Math.random() * 10)+3}s ease-in-out none;
+ ${({ time }) => (time ? time : 10)}s ease-in-out none;
 
 `;
 
