@@ -16,6 +16,7 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
     -moz-box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
     box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
     background: ${(props)=> props.current === "d" ? `url(${day})` : `url(${night})`};
+    background-size: cover;
 
     @media (min-width:576px){                            //responsive para escritorio
         width:16rem;                                     //1 rem = 16px en pantallas de pc
