@@ -24,7 +24,7 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
         grid-template-columns:1fr;
         grid-template-rows:repeat(7,1fr);
         border: 1.5px #fff solid;
-        border-radius: 25px;
+        border-radius: 22px;
         
         &:hover{
         transform : scale(1.1);
