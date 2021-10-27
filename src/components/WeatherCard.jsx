@@ -23,7 +23,8 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
         height:23rem;    
         grid-template-columns:1fr;
         grid-template-rows:repeat(7,1fr);
-        border: 1px #fff solid;
+        border: 1.5px #fff solid;
+        border-radius: 25px;
         
         &:hover{
         transform : scale(1.1);
