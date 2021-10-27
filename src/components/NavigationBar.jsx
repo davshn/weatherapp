@@ -6,8 +6,11 @@ const NavigationContainer = styled.section`               //Estilo del contenedo
 width: 80%;
 height: 3rem;
 border-radius: 1px;
- margin-left:auto;
+margin-left:12%;
+@media (min-width:576px){                            //responsive para escritorio
+  margin-left:auto;
 
+    }
 `;
 
 

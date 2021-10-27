@@ -20,14 +20,18 @@ const SubmitButton = styled.input`
   }
 `
 const TextSearch = styled.input`
-  width:60%;
+  width:50%;
   height: 1.5rem;
-  padding:0.25rem 4rem 0.25rem 0.25rem;
+  padding:0.25rem 2rem 0.25rem 0.25rem;
   border-radius: 15px 0px 0px 15px;
   border: #fff 1px solid;
   opacity: 0.6;
   font-family: "century gothic";
-  
+  @media (min-width:576px){                            //responsive para escritorio
+    width:60%;
+    padding:0.25rem 4rem 0.25rem 0.25rem;
+
+    }
 
 `
 
