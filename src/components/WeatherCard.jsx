@@ -31,10 +31,10 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
 	    -webkit-transform : scale(1.1); /* Chrome - Safari */
 	    -o-transform : scale(1.1); /* Opera */
 	    -ms-transform : scale(1.1); /* IE9 */
-        -webkit-box-shadow: 7px 23px 65px -26px #f6f0fc;
-        -moz-box-shadow: 7px 23px 65px -26px #f6f0fc;
-        box-shadow: 7px 23px 65px -26px #f6f0fc;
-        }
+        -webkit-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+-moz-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+ }
     }                                          
   
 `;
