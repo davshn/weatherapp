@@ -3,10 +3,10 @@ import SearchBar from "./SearchBar";
 
 const NavigationContainer = styled.section`               //Estilo del contenedor de tarjetas
 
-
-  background: linear-gradient(45deg, #0e013d 0%, #f3b1e5 55%, rgba(121,9,115,1) 100%);;
-  border-radius: 5px;
-  opacity: 0.7;
+width: 80%;
+height: 3rem;
+border-radius: 1px;
+ margin-left:auto;
 
 `;
 

@@ -12,17 +12,18 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
     position:relative;
     align-items:center;
     border-radius: 0.5rem;
-    -webkit-box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
-    -moz-box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
-    box-shadow: 7px 23px 65px -26px rgba(137,33,255,1);
+    -webkit-box-shadow: 7px 23px 65px -26px #f6f0fc;
+    -moz-box-shadow: 7px 23px 65px -26px #f6f0fc;
+    box-shadow: 7px 23px 65px -26px #f6f0fc;
     background: ${(props)=> props.current === "d" ? `url(${day})` : `url(${night})`};
     background-size: cover;
 
     @media (min-width:576px){                            //responsive para escritorio
         width:16rem;                                     //1 rem = 16px en pantallas de pc
-        height:18rem;    
+        height:23rem;    
         grid-template-columns:1fr;
         grid-template-rows:repeat(7,1fr);
+        border: 1px #fff solid;
         
         &:hover{
         transform : scale(1.1);
@@ -30,9 +31,9 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
 	    -webkit-transform : scale(1.1); /* Chrome - Safari */
 	    -o-transform : scale(1.1); /* Opera */
 	    -ms-transform : scale(1.1); /* IE9 */
-        -webkit-box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
-        -moz-box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
-        box-shadow: 2px 8px 65px -5px rgba(137,33,255,1);
+        -webkit-box-shadow: 7px 23px 65px -26px #f6f0fc;
+        -moz-box-shadow: 7px 23px 65px -26px #f6f0fc;
+        box-shadow: 7px 23px 65px -26px #f6f0fc;
         }
     }                                          
   

@@ -7,15 +7,16 @@ export const CloseButton = styled.button`
   background: none;       
   color: white;
   border: 2px solid white;
-  border-radius: 40%;
+  border-radius: 25px;
   transition: all 1s ease-out;   //la animacion dura 1 segundo 
 
   
   &:hover {                       //Para declarar el over o cualquier seudo clase se usa el & como identificador
     transform:  rotateZ(360deg);  //rotacion
-    color: #eb53ff;
-    background-color: #fff;
-    opacity: 0.5;
+    color: #fff;
+    background-color: none;
+    opacity: 0.9;
+
     } 
     
 `;
