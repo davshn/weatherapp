@@ -5,73 +5,72 @@ import { Link } from 'react-router-dom';
 import {ContainerStyled} from "../components/ContainerStyled";
 import Bubbles from "../components/Bubbles";
 import { HomeImg } from "../components/HomeStyled";
-import despejadoDia from "../assets/despejadoDia.jpg";
-import despejadoNoche from "../assets/despejadoNoche.jpg";
-import nubesDia from "../assets/nubesDia.jpg";
-import nubesNoche from "../assets/nubesNoche.jpg";
-import nublado from "../assets/nublado.jpg";
-import lluviaDia from "../assets/lluviaDia.jpg";
-import lluviaNoche from "../assets/lluviaNoche.jpg";
-import tormentaDia from "../assets/tormentaDia.jpg";
-import tormentaNoche from "../assets/tormentaNoche.jpg";
-import nieveDia from "../assets/nieveDia.jpg";
-import nieveNoche from "../assets/nieveNoche.jpg";
-import neblina from "../assets/neblina.jpg";
 
 const DetailedCard = styled.article` 
     margin:10%;
     display:grid;
     position:relative;
-    border:1px black solid;
+    box-shadow:  20px 20px 48px #1f2836,                //Sombra de la tarjeta
+             -20px -20px 48px #57709a;
+    border: 1px solid rgba(255, 255, 255, 0.125);              //Color borde y tamaño
     border-radius:10%;
     width: 80%;
     background: ${(props)=> { 
         switch (props.current){
-            case "01d": return `url(${despejadoDia})`
-            case "02d": return `url(${nubesDia})`
-            case "03d": return `url(${nublado})`
-            case "04d": return `url(${nublado})`
-            case "09d": return `url(${lluviaDia})`
-            case "10d": return `url(${lluviaDia})`
-            case "11d": return `url(${tormentaDia})`
-            case "13d": return `url(${nieveDia})`
-            case "01n": return `url(${despejadoNoche})`
-            case "02n": return `url(${nubesNoche})`
-            case "03n": return `url(${nublado})`
-            case "04n": return `url(${nublado})`
-            case "09n": return `url(${lluviaNoche})`
-            case "10n": return `url(${lluviaNoche})`
-            case "11n": return `url(${tormentaNoche})`
-            case "13n": return `url(${nieveNoche})`
-            default: return `url(${neblina})`
-       }
-
-    }};
-
+            case "01d": return `linear-gradient(180deg, rgba(0,166,173,0.6674019949776786) 0%, rgba(105,180,195,0.5637605383950455) 35%, rgba(198,240,244,0.4573179613642332) 100%);`
+            case "02d": return `linear-gradient(180deg, rgba(68,69,70,0.6674019949776786) 0%, rgba(121,121,121,0.5637605383950455) 35%, rgba(168,176,177,0.4573179613642332) 100%);`
+            case "03d": return `linear-gradient(180deg, rgba(68,69,70,0.6674019949776786) 0%, rgba(121,121,121,0.5637605383950455) 35%, rgba(168,176,177,0.4573179613642332) 100%);`
+            case "04d": return `linear-gradient(180deg, rgba(68,69,70,0.6674019949776786) 0%, rgba(121,121,121,0.5637605383950455) 35%, rgba(168,176,177,0.4573179613642332) 100%);`
+            case "09d": return `linear-gradient(180deg, rgba(33,54,109,0.7150210425967262) 0%, rgba(107,100,159,0.6786064767703957) 35%, rgba(163,148,211,0.5777661406359419) 100%);`
+            case "10d": return `linear-gradient(180deg, rgba(33,54,109,0.7150210425967262) 0%, rgba(107,100,159,0.6786064767703957) 35%, rgba(163,148,211,0.5777661406359419) 100%);`
+            case "11d": return `linear-gradient(180deg, rgba(63,88,159,0.7150210425967262) 0%, rgba(242,239,169,0.6786064767703957) 35%, rgba(171,154,220,0.5777661406359419) 100%);`
+            case "13d": return `linear-gradient(180deg, rgba(102,118,163,0.7150210425967262) 0%, rgba(240,240,240,0.6786064767703957) 35%, rgba(155,139,201,0.5777661406359419) 100%);`
+            case "01n": return `linear-gradient(180deg, rgba(0,42,92,0.6674019949776786) 0%, rgba(0,84,101,0.5637605383950455) 35%, rgba(72,159,167,0.4573179613642332) 100%);`
+            case "02n": return `linear-gradient(180deg, rgba(0,0,0,0.7150210425967262) 0%, rgba(95,95,95,0.6786064767703957) 35%, rgba(124,124,124,0.5777661406359419) 100%);`
+            case "03n": return `linear-gradient(180deg, rgba(0,0,0,0.7150210425967262) 0%, rgba(95,95,95,0.6786064767703957) 35%, rgba(124,124,124,0.5777661406359419) 100%);`
+            case "04n": return `linear-gradient(180deg, rgba(0,0,0,0.7150210425967262) 0%, rgba(95,95,95,0.6786064767703957) 35%, rgba(124,124,124,0.5777661406359419) 100%);`
+            case "09n": return `linear-gradient(180deg, rgba(17,28,58,0.7150210425967262) 0%, rgba(65,61,101,0.6786064767703957) 35%, rgba(89,82,110,0.5777661406359419) 100%);`
+            case "10n": return `linear-gradient(180deg, rgba(17,28,58,0.7150210425967262) 0%, rgba(65,61,101,0.6786064767703957) 35%, rgba(89,82,110,0.5777661406359419) 100%);`
+            case "11n": return `linear-gradient(180deg, rgba(43,57,96,0.7150210425967262) 0%, rgba(184,182,127,0.6786064767703957) 35%, rgba(100,91,127,0.5777661406359419) 100%);`
+            case "13n": return `linear-gradient(180deg, rgba(43,57,96,0.7150210425967262) 0%, rgba(240,240,240,0.6786064767703957) 35%, rgba(132,129,141,0.5777661406359419) 100%);`
+            default: return `linear-gradient(180deg, rgba(81,34,71,0.7150210425967262) 0%, rgba(118,105,123,0.6786064767703957) 35%, rgba(166,179,178,0.5777661406359419) 100%);`
+       }}};
     @media (min-width:576px){                            //responsive para escritorio
         width:20%;
         margin:5% 40%;
+        &:hover{
+        transform : scale(1.1);
+	    -moz-transform : scale(1.1); /* Firefox */
+	    -webkit-transform : scale(1.1); /* Chrome - Safari */
+	    -o-transform : scale(1.1); /* Opera */
+	    -ms-transform : scale(1.1); /* IE9 */
+        -webkit-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+        -moz-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+        box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+                }
     }
     
 `;
 
 const TitleCard = styled.h2`
     -webkit-text-stroke: 1px white;
-    color: black; text-align: center;
-    font-size: 37px;
+    color: transparent; 
+    font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 `;
 
 const InfoTitle = styled.span`
     font-weight:700;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fdfdfd;
 `;
 
 const InfoText = styled.span`
     display:table;
     margin-left: auto;
-    color: black;
+    color: #fdfdfd;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: capitalize;
 `;
