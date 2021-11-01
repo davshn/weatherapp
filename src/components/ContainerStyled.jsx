@@ -4,6 +4,9 @@ import styled from "styled-components"
 export const ContainerStyled = styled.main`
   background: url(${background});
   background-size: cover;
-  height:100vh;
+  background-attachment: fixed;
+  min-height:100vh;
+
+
 
 `

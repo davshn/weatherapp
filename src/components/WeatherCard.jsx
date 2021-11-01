@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import {CloseButton} from './CloseButtonStyled';
 import propTypes from "prop-types";
-import day from "../assets/dia.jpg";
-import night from "../assets/noche.jpg";
 import { Link } from "react-router-dom";
 
 const WhCard = styled.article`               //Estilo de la tarjeta de clima
@@ -11,11 +9,13 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
     grid-template-rows:repeat(3,1fr);                 //1 columna de una tercera parte del tamaño de la segunda
     position:relative;
     align-items:center;
-    border-radius: 0.5rem;
-    -webkit-box-shadow: 7px 23px 65px -26px #f6f0fc;
-    -moz-box-shadow: 7px 23px 65px -26px #f6f0fc;
-    box-shadow: 7px 23px 65px -26px #f6f0fc;
-    background: ${(props)=> props.current === "d" ? `url(${day})` : `url(${night})`};
+    border-radius: 39px;
+    box-shadow:  20px 20px 48px #1f2836,                //Sombra de la tarjeta
+             -20px -20px 48px #57709a;
+    border: 1px solid rgba(255, 255, 255, 0.125);              //Color borde y tamaño
+    backdrop-filter: blur(6px) saturate(200%);                  //Tatjeta transparente y borroso el fondo
+    -webkit-backdrop-filter: blur(6px) saturate(200%);
+    background: ${(props)=> props.current === "d" ? `rgba(37, 137, 112, 0.37)` : `rgba(17, 25, 40, 0.63)`};   //Terciario cambia fondo si es dia o noche
     background-size: cover;
 
     @media (min-width:576px){                            //responsive para escritorio
@@ -23,8 +23,6 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
         height:23rem;    
         grid-template-columns:1fr;
         grid-template-rows:repeat(7,1fr);
-        border: 1.5px #fff solid;
-        border-radius: 22px;
         
         &:hover{
         transform : scale(1.1);
@@ -33,8 +31,8 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
 	    -o-transform : scale(1.1); /* Opera */
 	    -ms-transform : scale(1.1); /* IE9 */
         -webkit-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
--moz-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+        -moz-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+        box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
  }
     }                                          
   

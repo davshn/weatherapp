@@ -88,6 +88,7 @@ const ImgCard = styled.img`
       margin-bottom:1%;
       width:15%;                     
     }
+    
 `;
 
 export default function CityExtended({onFilter}) {

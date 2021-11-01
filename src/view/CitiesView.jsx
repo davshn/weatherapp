@@ -8,7 +8,7 @@ import {HomeImg} from "../components/HomeStyled";
 
 export default function Citiesview({onSearch,cities,onClose}){
   return (
-    <ContainerStyled>
+    <ContainerStyled > 
       <Bubbles></Bubbles>
       <Link to='/about'>            {/*Link a about */} 
             <HomeImg src={icon}></HomeImg>
