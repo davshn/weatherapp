@@ -9,7 +9,7 @@ const [cities, setCities] = useState([]);                 //Estado para agregar 
   const apiKey='d5798098cb9831e5df41e6dcea8d454c';
 
 function onClose(id) {                                    //Funcion para cerrar las tarjetas
-    setCities(oldCities => oldCities.filter(c => c.id !== id));
+    setCities(oldCities => oldCities.filter(city => city.id !== id));
   }
 
 function onSearch(city) {                   //Funcion buscadora, trae la informacion de la API
@@ -25,7 +25,7 @@ function onSearch(city) {                   //Funcion buscadora, trae la informa
           pressure:resource.main.pressure,
           humidity:resource.main.humidity,
           sunrise:resource.sys.sunrise,
-          sunset:resource.sys.sunset,      //Temperatura
+          sunset:resource.sys.sunset,      
           id: resource.id,                                 //Codigo unico ciudad
           weatherDesc: resource.weather[0].description,    //Descripcion del clima
           country: resource.sys.country,                   //Pais
@@ -34,14 +34,15 @@ function onSearch(city) {                   //Funcion buscadora, trae la informa
           wind:resource.wind.speed,
           clouds:resource.clouds.all               //Clima
         };
-      setCities(oldCities => [...oldCities, city]);       //Crea un arreglo con todas las ciudades a mostrar
+        setCities(oldCities => oldCities.filter(c => c.id !== city.id)); //elimina la ciudad si esta repetida
+        setCities(oldCities => [...oldCities, city]);       //Crea un arreglo con todas las ciudades a mostrar
     } else {
       alert("Ciudad no encontrada");                        //Mensaje si no encuentra una ciudad
     }
   });
   }
 function onFilter(cityId) {
-  let city = cities.filter(c => c.id === parseInt(cityId));
+  let city = cities.filter(city => city.id === parseInt(cityId));
   if(city.length > 0) {
       return city[0];
   } else {
