@@ -62,6 +62,7 @@ const InfoTitle = styled.span`              //Titulo de informacion
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fdfdfd;
+    padding-left:5%;
 `;
 const InfoText = styled.span`                   //Texto informativo
     display:table;
@@ -69,6 +70,7 @@ const InfoText = styled.span`                   //Texto informativo
     color: #fdfdfd;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: capitalize;
+    padding-right:5%;
 `;
 const ImgCard = styled.img`                 //Imagen del clima
     display: block;
