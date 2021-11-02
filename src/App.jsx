@@ -8,7 +8,7 @@ export default function App() {
 const [cities, setCities] = useState([]);                 //Estado para agregar las ciudades
   const apiKey='d5798098cb9831e5df41e6dcea8d454c';
 
-function onClose(id) {                                    //Funcion para cerrar las tarjetas
+  function onClose(id) {                                    //Funcion para cerrar las tarjetas
     setCities(oldCities => oldCities.filter(city => city.id !== id));
   }
 
@@ -41,7 +41,7 @@ function onSearch(city) {                   //Funcion buscadora, trae la informa
     }
   });
   }
-function onFilter(cityId) {
+function onFilter(cityId) {                                 //Filtro para detallar las cartas
   let city = cities.filter(city => city.id === parseInt(cityId));
   if(city.length > 0) {
       return city[0];

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
-
-//Estilo para los botones 
-const SubmitButton = styled.input`
+//Formulario de busqueda 
+const SubmitButton = styled.input`    //Boton ver
   width: 7rem;
   height: 2.1rem;
   right:0.5rem;
@@ -14,12 +13,12 @@ const SubmitButton = styled.input`
   font-weight: lighter;
   font-family: "century gothic";
 
-&:hover{
+&:hover{ 
   background: #010125;
   color: #fff;
   }
 `
-const TextSearch = styled.input`
+const TextSearch = styled.input`      //Barra de busqueda
   width:50%;
   height: 1.5rem;
   padding:0.25rem 2rem 0.25rem 0.25rem;
@@ -30,9 +29,7 @@ const TextSearch = styled.input`
   @media (min-width:576px){                            //responsive para escritorio
     width:60%;
     padding:0.25rem 4rem 0.25rem 0.25rem;
-
     }
-
 `
 
 export default function SearchBar({onSearch}) {
@@ -52,7 +49,6 @@ export default function SearchBar({onSearch}) {
             placeholder="¿Que ciudad buscas hoy?"
           />
           <SubmitButton type="submit" value="Ver"/> 
-          
         </form>
       );
     }

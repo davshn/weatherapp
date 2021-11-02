@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {ContainerStyled} from "../components/ContainerStyled";
 import Bubbles from "../components/Bubbles";
 import { HomeImg } from "../components/HomeStyled";
-
+//Contenedor cartas detalladas
 const DetailedCard = styled.article` 
     margin:10%;
     display:grid;
@@ -15,7 +15,7 @@ const DetailedCard = styled.article`
     border: 1px solid rgba(255, 255, 255, 0.125);              //Color borde y tamaño
     border-radius:10%;
     width: 80%;
-    background: ${(props)=> { 
+    background: ${(props)=> {               //Dependiendo el clima selecciona el fondo para las cartas
         switch (props.current){
             case "01d": return `linear-gradient(180deg, rgba(0,166,173,0.6674019949776786) 0%, rgba(105,180,195,0.5637605383950455) 35%, rgba(198,240,244,0.4573179613642332) 100%);`
             case "02d": return `linear-gradient(180deg, rgba(68,69,70,0.6674019949776786) 0%, rgba(121,121,121,0.5637605383950455) 35%, rgba(168,176,177,0.4573179613642332) 100%);`
@@ -49,33 +49,28 @@ const DetailedCard = styled.article`
         box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
                 }
     }
-    
 `;
-
-const TitleCard = styled.h2`
+const TitleCard = styled.h2`            //titulo de las cartas
     -webkit-text-stroke: 1px white;
     color: transparent; 
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 `;
-
-const InfoTitle = styled.span`
+const InfoTitle = styled.span`              //Titulo de informacion
     font-weight:700;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fdfdfd;
 `;
-
-const InfoText = styled.span`
+const InfoText = styled.span`                   //Texto informativo
     display:table;
     margin-left: auto;
     color: #fdfdfd;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: capitalize;
 `;
-
-const ImgCard = styled.img`
+const ImgCard = styled.img`                 //Imagen del clima
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -89,9 +84,8 @@ const ImgCard = styled.img`
     }
     
 `;
-
 export default function CityExtended({onFilter}) {
-    let city= onFilter(useParams().id)
+    let city= onFilter(useParams().id)          //Recibe informacion de la ciudad seleccionada
     return (
         <ContainerStyled>
             <Bubbles></Bubbles>

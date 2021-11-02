@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+//Bonton home
 export const HomeImg = styled.img`
     display: block;
     margin-left: auto;

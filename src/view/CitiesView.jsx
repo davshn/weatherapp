@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {ContainerStyled} from "../components/ContainerStyled";
 import Bubbles from "../components/Bubbles";
 import {HomeImg} from "../components/HomeStyled";
-
+//Pantalla de las cartas
 export default function Citiesview({onSearch,cities,onClose}){
   return (
     <ContainerStyled > 

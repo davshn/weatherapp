@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
-import './normalize.css';
-
+import './normalize.css';     //Normaliza los estilos
 
 ReactDOM.render(              //Realiza el render de la app
   <BrowserRouter>            {/*Invoca el router y la react app*/}

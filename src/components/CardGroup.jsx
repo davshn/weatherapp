@@ -1,7 +1,7 @@
 import WeatherCard from './WeatherCard';
 import styled from "styled-components"
 import propTypes from "prop-types";
-
+//Contenedor de las cartas, envia informacion a las cartas
 const CardContainer = styled.section`               //Estilo del contenedor de tarjetas
   display:flex;
   flex-direction:column;                            //organiza en columnas las tarjetas
@@ -24,10 +24,10 @@ export default function CardGroup({cities,onClose}) {
   if(cities){
     return (      //Crea el contenedor de tarjetas y crea cada tarjeta con la informacion de la ciudad
     <CardContainer>    
-    {
-      cities.map((city)=> <WeatherCard 
+    { 
+      cities.map((city)=> <WeatherCard          
         onClose={onClose}
-        key={city.id}
+        key={city.id}                       
         id={city.id}
         name={city.name}
         country={city.country}

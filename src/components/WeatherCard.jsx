@@ -2,8 +2,8 @@ import styled from "styled-components"
 import {CloseButton} from './CloseButtonStyled';
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
-
-const WhCard = styled.article`               //Estilo de la tarjeta de clima
+//Estilo de la tarjeta de clima
+const WhCard = styled.article`               
     display:grid;                               //crea una cuadricula
     grid-template-columns:repeat(2,1fr);        //2 columnas iguales de grandes
     grid-template-rows:repeat(3,1fr);                 //1 columna de una tercera parte del tamaño de la segunda
@@ -23,45 +23,39 @@ const WhCard = styled.article`               //Estilo de la tarjeta de clima
         height:23rem;    
         grid-template-columns:1fr;
         grid-template-rows:repeat(7,1fr);
-        
         &:hover{
-        transform : scale(1.1);
-	    -moz-transform : scale(1.1); /* Firefox */
-	    -webkit-transform : scale(1.1); /* Chrome - Safari */
-	    -o-transform : scale(1.1); /* Opera */
-	    -ms-transform : scale(1.1); /* IE9 */
-        -webkit-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
-        -moz-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
-        box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+            transform : scale(1.1);
+	        -moz-transform : scale(1.1); /* Firefox */
+	        -webkit-transform : scale(1.1); /* Chrome - Safari */
+	        -o-transform : scale(1.1); /* Opera */
+	        -ms-transform : scale(1.1); /* IE9 */
+            -webkit-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+            -moz-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
+            box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
  }
     }                                          
-  
 `;
 //estilo para los titulos de las cartas
-const Routlink= styled(Link)`
+const Routlink= styled(Link)`                       //Link a las cartas detalladas
     grid-column: 1/span 2;
     text-align: center;
     text-decoration: none;
-    
     @media (min-width:576px){                            //responsive para escritorio
         grid-column: 1;                         
     }              
 `
-
-const TitleCard = styled.span`
+const TitleCard = styled.span`                          //Titulos de las tarjetas
     -webkit-text-stroke: 1px white;
     color: transparent; 
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 `;
-
-const InfoText = styled.span`
+const InfoText = styled.span`                           //Informacion en las tarjetas
     color: #fdfdfd;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
 `;
-const InfoCountry = styled.span`
+const InfoCountry = styled.span`                        //Informacion del pais
     grid-column: 1/span 2;
     color: #fdfdfd;
     text-align: center;
@@ -70,7 +64,7 @@ const InfoCountry = styled.span`
         grid-column: 1;                         
     }  
 `;
-const ImgCard = styled.img`
+const ImgCard = styled.img`                              //Imagen del clima
     grid-column: 1/span 2;
     display: block;
     margin-left: auto;
@@ -83,7 +77,7 @@ const ImgCard = styled.img`
 
 export default function WeatherCard({onClose,name,id,country,weather,longitude,latitude,sunrise,sunset}) {       //Función generadora del componente tarjeta
     function getDate(unix){
-    let date=new Date(unix*1000);
+        let date=new Date(unix*1000);
         return date;
     }
     return (                          //Dentro del return hay codigo html xon inserciones de javascript

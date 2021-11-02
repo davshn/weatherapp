@@ -5,7 +5,7 @@ import Bubbles from "../components/Bubbles";
 import { HomeImg } from '../components/HomeStyled';
 
 export default function About() {
-
+//Acerca de
 return (
     <ContainerStyled>
         <Bubbles></Bubbles>
