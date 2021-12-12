@@ -32,7 +32,7 @@ const WhCard = styled.article`
             -webkit-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
             -moz-box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
             box-shadow: 0px -7px 26px 0px rgba(255,255,255,1);
- }
+        }
     }                                          
 `;
 //estilo para los titulos de las cartas

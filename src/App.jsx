@@ -19,7 +19,7 @@ function onSearch(city) {                   //Funcion buscadora, trae la informa
       if(resource.main !== undefined){
         const city = {
           longitude:resource.coord.lon,
-          latitude:resource.coord.lon,
+          latitude:resource.coord.lon,        //revisar
           termalSense:Math.round(resource.main.feels_like*10)/10,
           temp: Math.round(resource.main.temp*10)/10,
           pressure:resource.main.pressure,
